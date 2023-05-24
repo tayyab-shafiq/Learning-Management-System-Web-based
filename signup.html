@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/22.ico" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <title>E-LMS Signup</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+           
+        }
+        body{
+            background-color:#eeeeee;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        nav{
+            background-color: #ffffff;
+            height: 100px;
+            width: 100%;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .navmid{
+            background-color: #ffffff;
+            height: 100px;
+            width: 70%;
+            margin: auto;
+        }
+        #logo{
+            width: 100px;
+            top: 19px;
+            left: 610px;
+            position: relative;
+        }
+        .mid{
+            background-color: white;
+            height: 770px;
+            width: 70%;
+            margin: auto;
+            
+        }
+        .login{
+            background-color: rgb(184, 184, 184);
+            height: 500px;
+            width: 85%;
+            position: relative;
+            top: 116px;
+            margin: auto;
+            -webkit-box-shadow: 10px 10px 14px -13px rgba(219,219,219,1);
+            -moz-box-shadow: 10px 10px 14px -13px rgba(219,219,219,1);
+             box-shadow: 10px 10px 14px -13px rgba(219,219,219,1);
+             border-radius: 20px;
+             background-image: url('https://images.unsplash.com/photo-1492538368677-f6e0afe31dcc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        }
+        .inpute{
+            background-color: #263238;
+            border-radius: 20px;
+            height: 100%;
+            width: 35%;
+            float: right;
+            text-align: center;
+        }
+         input:focus{
+            border: none;
+            outline: none;
+        }
+        div h1{
+            position: relative;
+            top: 50px;
+            color: white;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 100;
+        }
+        .loginbar{
+            position: relative;
+            top: 100px;
+            height: 30px;
+            width: 250px;
+            border-radius: 20px;
+            border: none;
+            margin-bottom: 20px;
+            text-align: center;
+            border-color: #263238;
+        }
+        #but{
+            position: relative;
+            top: 100px;
+            height: 38px;
+            width: 255px;
+            border-radius: 20px;
+            background-color: white;
+            border: none;
+        }
+         footer{
+            width: 100%;
+            height: 66px;
+            background-color: #263238;
+        }
+        #pages{
+        	text-decoration: none;
+        	color: white;
+            margin-left: 20px;
+            font-size: 12px;
+        }
+        #sociallogo{
+        	float: right;
+        	margin-right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navmid">
+            <a href=""><img id="logo" src="icon/mainlogo.png" alt=""></a>
+        </div>
+    </nav>
+    <div class="mid">
+        <div class="login">
+
+            <div class="inpute">
+                <h1>SIGN UP</h1>
+                <form action="">
+                    <input class="loginbar" id="bar" autocomplete="off" type="text" name="" placeholder="First Name">
+                    <input class="loginbar" id="bar" autocomplete="off" type="text" name="" placeholder="Last Name">
+                    <input class="loginbar" id="bar1" autocomplete="off" type="text" name="" placeholder="Email Address">
+                    <input class="loginbar" id="bar2" autocomplete="off" type="password" name="" placeholder="Password">
+                    <input class="loginbar" id="bar3" autocomplete="off" type="password" name="" placeholder="Re-enter Password">
+                    <input class="loginbar" type="button" value="Login" id="but" onclick="validate()">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function validate() {
+            var name = document.getElementById("bar").value;
+            var username = document.getElementById("bar1").value;
+            var password = document.getElementById("bar2").value;
+            //regex expression for email and password check//
+            var mailformat = /\S+@\S+\.\S+/;
+            var decimal=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+            if (name == null || name == ""){
+                alert("Please enter Name")
+            }
+            if (username == null || username == "") {
+                alert("Please enter the Email");
+                return false;
+            }
+            if (password == null || password == "") {
+                alert("Please enter the password");
+                return false;
+            }
+            if(!document.getElementById("bar1").value.match(mailformat)){
+                alert("Please enter correct the Email");
+                return false;
+            }
+            if (!document.getElementById("bar2").value.match(decimal)){
+                alert('your password must be between 8-15\nyour password must contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character')
+                return false;
+            }
+            if (document.getElementById("bar2").value != document.getElementById("bar3").value) {
+                alert("Pass not match");
+                return false;
+            }
+            else{
+            window.location.href = "Dashboard.html";}
+        } 
+</script>
+    <!-- footer -->
+    <footer>
+    	<br>
+        <a id="pages" href="Home.html">Home</a>
+        <a id="pages" href="About us.html">About US</a>
+        <a id="pages" href="Contact us.html">Contact US</a>
+        <a id="pages" href="Login.html">Login</a>
+        <a id="pages" href="signup.html">Signup</a>
+    	<a id="sociallogo" href="https://www.facebook.com/"><img src="icon/facebook.png" alt="fb" width="20px"></a> 
+        <a id="sociallogo" href="https://www.twitter.com"><img src="icon/twitter.png" alt="tw" width="22px"></a> 
+        <a id="sociallogo" href="https://www.instagram.com/"><img src="icon/instagram.png" alt="ig" width="20px"></a>
+        <h5 style="color: white;text-align:center;font-size-adjust: 2px;margin-top: 8px;">Copyright <img style="margin-bottom: -2px" src="icon/copyright.png" width="13px"> ELMS.LLC - 2018</h5>
+    </footer>
+</body>
+</html>

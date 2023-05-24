@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="images/22.ico" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>ELMS login Page</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        body {
+            background-color: #eeeeee;
+        }
+
+        nav {
+            background-color: #ffffff;
+            height: 100px;
+            width: 100%;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .navmid {
+            background-color: #ffffff;
+            height: 100px;
+            width: 70%;
+            margin: auto;
+        }
+
+        #logo {
+            width: 100px;
+            position: relative;
+            top: 19px;
+            left: 610px;
+        }
+
+        .mid {
+            background-color: rgb(255, 255, 255);
+            display: grid;
+            grid-template-columns: 400px 400px;
+
+        }
+
+        .bar {
+            height: 28px;
+            background-color: #c5c5c5;
+            text-align: center;
+            width: 100%;
+            font-family: 'Ubuntu', sans-serif;
+            padding-top: 8px;
+            color: rgb(255, 255, 255)
+        }
+        .griditem {
+            background-color: #263238;
+            height: 780px;
+            font-size: 40px;
+            text-align: center;
+            width: 280px;
+
+
+        }
+
+        .griditem2 {
+
+            background-color: rgb(255, 255, 255);
+            font-size: 40px;
+            margin-left: -120px;
+            width: 1590px;
+            height: 780px;
+        }
+
+        .prof {
+            background-color: rgba(169, 169, 223, 0); height: 100px;
+        }
+
+        .userimg {
+            width: 50px;
+            background-color: rgba(0, 0, 255, 0);
+            position: relative;
+            top: 25px;
+            left: -20px;
+        }
+
+        .prof a {
+            color: white;
+            background-color: rgba(255, 0, 0, 0);
+            font-family: 'Ubuntu', sans-serif;
+            text-decoration: none;
+            font-size: 20px;
+            position: relative;
+            top: 10px;
+            left: -10px;
+        }
+
+        .options {
+            background-color: rgba(255, 192, 203, 0);
+            margin-top: 65px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            padding-bottom: 20px;
+        }
+
+        li:hover {
+            border-right: 5px solid white;
+            transition: 0.2s ease-in-out;
+        }
+
+        .options a {
+
+            color: white;
+            background-color: rgba(255, 0, 0, 0);
+            font-family: 'Ubuntu', sans-serif;
+            text-decoration: none;
+            font-size: 18px;
+
+        }
+
+        .icon1 {
+            width: 20px;
+            position: relative;
+            right: 20px;
+            top: 2.5px;
+        }
+
+        .icon2 {
+            width: 22px;
+            position: relative;
+            right: 37px;
+            top: 2.5px;
+        }
+
+        .icon3 {
+            width: 20px;
+            position: relative;
+            right: 30px;
+            top: 2.5px;
+        }
+
+        .icon4 {
+            width: 20px;
+            position: relative;
+            right: 35px;
+            top: 2.5px;
+        }
+
+        .box {
+            padding: 20px;
+            background-color: rgba(255, 0, 0, 0);
+            margin: 10px 0 0 10px;
+            height: 730px;
+            width: 84%;
+            
+        }
+
+
+        h4 {
+
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 100;
+            font-size: 28px;
+            background-color: rgba(128, 128, 128, 0);
+            position: relative;
+            top: 10px;
+            left: 31px;
+            margin-bottom: 10px;
+        }
+        .profbox
+        {
+            height: 220px;
+            background-color: rgba(0, 0, 255, 0);
+            border: 1px solid rgba(128, 128, 128, 0.336);
+            margin-bottom: 10px;
+        }
+
+        .text p
+        {
+            float: left;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 18px;
+            padding: 15px;
+            
+            
+
+        }
+        #viewp
+        {
+            float: right;
+        }
+        .profilepic img
+        {
+            
+            width: 120px;
+            padding: 39px 0px 0 50px;
+            position: relative;
+            top: 15px;
+            right: 20px;
+        }
+        .choosimg p
+        {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 16px;
+            position: relative;
+            top: -100px;
+            left: 250px;
+            right: 0;
+            
+        }
+        .upload
+        {
+            text-decoration: none;
+            font-family: 'Ubuntu', sans-serif;
+            position: relative;
+            top: -100px;
+            left: 250px;
+            font-size: 21px;
+            color: white;
+            background-color:#263238;
+            padding: 9px;
+            font-weight: 100;
+            border-radius: 7px;
+        }
+        .profbox2
+        {
+            height: 490px;
+            background-color: rgba(0, 0, 255, 0);
+            border: 1px solid rgba(128, 128, 128, 0.336);
+            
+        }
+        .details
+        {
+            position: relative;
+            top: 60px;
+            right: 100px;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 16px;
+        }
+        table
+        {
+           
+            padding: 10px;
+        }
+        td
+        {
+            
+            padding: 10px;
+        }
+        footer{
+            width: 100%;
+            height: 66px;
+            background-color: #263238;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #pages{
+        	text-decoration: none;
+        	color: white;
+            margin-left: 20px;
+            font-size: 12px;
+        }
+        #sociallogo{
+        	float: right;
+        	margin-right: 50px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="navmid">
+            <img id="logo" src="icon/mainlogo.png" alt="">
+        </div>
+    </nav>
+    <!-- wlcome bar -->
+    <div class="bar">
+        <p>Hi Yaseen, Welcome to our ELMS... </p>
+    </div>
+    <!-- total mid selection -->
+    <div class="mid">
+        <!-- SIDE BAR -->
+        <div class="griditem">
+            <div class="prof">
+                <img class="userimg" src="icon/user.png" alt="">
+                <a href="">Yaseen Amin</a>
+            </div>
+            <div class="options">
+                <ul>
+                    <li>
+                        <img class="icon1" src="icon/dash.png" alt="">
+                        <a href="Dashboard.html">Dashboard</a>
+                    </li>
+                    <li>
+                        <img class="icon2" src="icon/face.png" alt="">
+                        <a href="profile.html">Profile</a>
+                    </li>
+                    <li>
+                        <img class="icon3" src="icon/settings.png" alt="">
+                        <a href="">Settings</a>
+                    </li>
+                    <li>
+                        <img class="icon4" src="icon/logout.png" alt="">
+                        <a href="Home.html">Logout</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- left side -->
+        <div class="griditem2">
+            <div class="box">
+                <div class="profbox">
+                    <div class="text">
+                        <p>photo</p>
+                        <p id="viewp">View Profile</p>
+                    </div>
+                    <dic class="profilepic">
+                        <img src="icon/user.png" alt="">
+                        <div class="choosimg">
+                            <p>Choose a image from your computer <br> max 100x100</p>
+                            
+                        </div>
+                    <a class="upload" href="">browse</a>
+                    <a class="upload" href="">Delete</a>
+                    </div>
+
+
+                    <div class="profbox2">
+                        <div class="text">
+                            <p>Information</p>
+                        </div>
+                        <div class="details">
+                            <table>
+                                <tr>
+                                    <td>First Name:</td>
+                                    <td>Yaseen</td>
+                                </tr>
+                                <tr>
+                                    <td>Last Name</td>
+                                    <td>Amin</td>
+                                </tr>
+                                <tr>
+                                    <td>E-amil Address:</td>
+                                    <td>Yaseen@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>Mobile No:</td>
+                                    <td>033********</td>
+                                </tr>
+                                <tr>
+                                    <td>City:</td>
+                                    <td>Karachi</td>
+                                </tr>
+                                <tr>
+                                    <td>country:</td>
+                                    <td>Pakistan</td>
+                                </tr>
+                                <tr>
+                                    <td>Address:</td>
+                                    <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, perferendis. Perferendis earum odio a in quia ipsa suscipit hic eius.</td>
+                                </tr>
+                                <tr>
+                                    <td>Gender:</td>
+                                    <td>Male</td>
+                                </tr>
+                            </table>
+                        </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <br>
+        <a id="pages" href="Home.html">Home</a>
+        <a id="pages" href="About us.html">About US</a>
+        <a id="pages" href="Contact us.html">Contact US</a>
+        <a id="pages" href="Login.html">Login</a>
+        <a id="pages" href="signup.html">Signup</a>
+        <a id="sociallogo" href="https://www.facebook.com/"><img src="icon/facebook.png" alt="fb" width="20px"></a> 
+        <a id="sociallogo" href="https://www.twitter.com"><img src="icon/twitter.png" alt="tw" width="22px"></a> 
+        <a id="sociallogo" href="https://www.instagram.com/"><img src="icon/instagram.png" alt="ig" width="20px"></a>
+        <h5 style="color: white;text-align:center;font-size-adjust: 2px;margin-top: 8px;">Copyright <img style="margin-bottom: -2px" src="icon/copyright.png" width="13px"> ELMS.LLC - 2018</h5>
+    </footer>
+</body>
+
+</html>

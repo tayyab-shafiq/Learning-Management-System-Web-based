@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="images/22.ico" type="image/png">
+        <title>E-LMS Contact Us</title>
+    </head>
+    <style>
+    *{
+        margin: 0px;
+        padding: 0px;
+           
+    }
+    body{
+        background-color:#eeeeee;
+        font-family: Arial;
+    }
+    nav{
+        background-color: #ffffff;
+        height: 100px;
+        width: 100%;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .navmid{
+        background-color: #ffffff;
+        height: 100px;
+        width: 70%;
+        margin: auto;
+    }
+    #logo{
+        width: 100px;
+        top: 19px;
+        left: 620px;
+        position: relative;
+    }
+    .mid{
+        background-color: #263238;
+        height: 770px;
+        width: 70%;
+        margin: auto;
+            
+        }
+    #contactus{
+        background-color: white;
+        width: 100%;
+        height: 90%;
+    }    
+    #form{
+        text-align: center;
+        margin-top: -1vh;
+    }
+    #form input{
+        margin-top: -1vh;
+        padding: 3px 15px;
+        font-size: 2vh;
+        text-align: center;
+        outline: none;
+        border-radius: 10px;
+    }
+    #form label{
+        font-size: 2vh;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+    #massage{
+        border-radius: 20px;
+    }
+    footer{
+            width: 100%;
+            height: 66px;
+            background-color: #263238;
+        }
+        #pages{
+        	text-decoration: none;
+        	color: white;
+            margin-left: 20px;
+            font-size: 12px;
+        }
+        #sociallogo{
+        	float: right;
+        	margin-right: 50px;
+        }
+    </style>
+    <body>
+        <nav>
+            <div class="navmid">
+               <a href=""><img id="logo" src="icon/mainlogo.png" alt=""></a>
+            </div>
+            <!-- total mid selection -->
+        </nav>
+        <div class="mid">
+            <br><br>
+            <h1 style="text-align: center;text-shadow: rgb(52, 60, 68) 1px 1px 5px;color: #ffffff;">Contact US</h1>
+            <br><br>
+            <div id="contactus">
+                <form id="form" action="">
+                    <br><br>
+                    <label>Name</label>
+                    <br><br>
+                    <input type="text" placeholder="Your Name">
+                    <br><br>
+                    <label>Email</label>
+                    <br><br>
+                    <input id="email" type="text"  placeholder="Your email">
+                    <br><br>
+                    <label>Student ID</label>
+                    <br><br>
+                    <input id="stdid" type="text" placeholder="Student ID">
+                    <br><br>
+                    <label for="massage">Your Massage</label>
+                    <br>
+                    <br>
+                    <textarea name="Your massage" id="massage" cols="60" rows="8" style="outline: none; font-size: 20px;"></textarea>
+                    <br><br><br>
+                    <button type="Submit" style="padding: 15px 30px;background-color: #263238; color: #ffffff; border-radius: 20px;outline: none;" onclick="validate()">Submit</button>
+                </form>
+            </div>
+        </div>
+        <script>
+        function validate() {
+            var username = document.getElementById("email").value;
+            var studentID = document.getElementById("stdid").value;
+            var massage = document.getElementById("massage").value;
+            //regex expression for email and password check//
+            var mailformat = /\S+@\S+\.\S+/;
+            if (username == null || username == "") {
+                alert("Please enter the Email");
+                return false;
+            }
+            if(!document.getElementById("email").value.match(mailformat)){
+                alert("Please enter correct the Email")
+                return false;
+            }
+            if(studentID == null || studentID == ""){
+                alert("Please enter the Student ID");
+                return false;
+            }
+            if(!document.getElementById("stdid").value.match("cs")){
+                if(!document.getElementById("stdid").value.match("CS")){
+                    if(!document.getElementById("stdid").value.match("Cs")){
+                        if(!document.getElementById("stdid").value.match("cS")){
+                           alert("Please enter correct the Student ID")
+                           return false;
+                        }
+                    }
+                }
+            }
+            if(massage == null || massage == ""){
+                alert("Please enter your Massage");
+                return false;
+            }
+            window.location.href = "About us.html";
+        } 
+        </script>
+        <!-- footer -->
+        <footer>
+            <br>
+            <a id="pages" href="Home.html">Home</a>
+            <a id="pages" href="About us.html">About US</a>
+            <a id="pages" href="Contact us.html">Contact US</a>
+            <a id="pages" href="Login.html">Login</a>
+            <a id="pages" href="signup.html">Signup</a>
+            <a id="sociallogo" href="https://www.facebook.com/"><img src="icon/facebook.png" alt="fb" width="20px"></a> 
+            <a id="sociallogo" href="https://www.twitter.com"><img src="icon/twitter.png" alt="tw" width="22px"></a> 
+            <a id="sociallogo" href="https://www.instagram.com/"><img src="icon/instagram.png" alt="ig" width="20px"></a>
+            <h5 style="color: white;text-align:center;font-size-adjust: 2px;margin-top: 8px;">Copyright <img style="margin-bottom: -2px" src="icon/copyright.png" width="13px"> ELMS.LLC - 2018</h5>
+        </footer>
+    </body>
+</html>
